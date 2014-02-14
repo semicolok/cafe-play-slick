@@ -1,0 +1,21 @@
+@commons.layout("Welcome to Cafe") {
+
+<div data-ng-include="'assets/partials/common/navbar.html'"></div>
+<div class="container-fluid">
+  <div class="row" data-ng-include="'assets/partials/common/sidebar.html'" data-ng-controller="SidebarCtrl"></div>
+  <div class="row">
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <div data-ng-view></div>
+    </div>
+  </div>
+</div>
+
+<script src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))'></script>
+<script src='@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap.min.js"))'></script>
+<script src='@routes.WebJarAssets.at(WebJarAssets.locate("angular.js"))'></script>
+<script src='@routes.WebJarAssets.at(WebJarAssets.locate("angular-route.js"))'></script>
+
+<script src='assets/js/index.js'></script>
+<script src='assets/js/controllers/indexController.js'></script>
+<script src='assets/js/services/boardService.js'></script>
+}
